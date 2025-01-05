@@ -7,7 +7,8 @@ import RelatedVideoList from "../components/list/RelatedVideoList";
 import Loading from "../components/ui/Loading";
 import { fetchVideo } from "../features/video/videoSlice";
 
-export default function Video() {
+
+export default function  Video() {
     const { video, isLoading, isError, error } = useSelector(
         (state) => state.video
     );
@@ -29,7 +30,7 @@ export default function Video() {
 
     if (!isLoading && !isError && !video?.id) {
         content = <div className="col-span-12">No video found!</div>;
-    }
+    };
 
     if (!isLoading && !isError && video?.id) {
         content = (
@@ -43,7 +44,7 @@ export default function Video() {
                 <RelatedVideoList currentVideoId={id} tags={tags} />
             </div>
         );
-    }
+    };
 
     return (
         <section className="pt-6 pb-20">

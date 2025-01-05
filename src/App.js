@@ -4,6 +4,7 @@ import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/Home";
 import Video from "./pages/Video";
 
+// Module - 6 
 function App() {
     return (
         <Router>
